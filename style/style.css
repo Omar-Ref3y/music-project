@@ -1,0 +1,811 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --hColor: #df9a57;
+  --bgColor: #fa9c22;
+  --strokeColor: #eefc57;
+  --trans: all 0.4s ease;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: poppins, "sans-serif";
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+section {
+  padding: 5rem 0;
+  display: block;
+}
+body {
+  padding-bottom: 5rem;
+  background-color: black;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+.font {
+  font-size: 20px;
+}
+a {
+  color: #fff;
+}
+.btn {
+  cursor: pointer;
+}
+.aHover:hover {
+  color: green;
+  transition: var(--trans);
+}
+.play_free {
+  height: 60px;
+  background-color: var(--hColor);
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin: auto;
+}
+.playFree {
+  padding: 0.5rem 2rem;
+  background-color: #5e5b52;
+  border-radius: 0.4rem;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  transition: var(--trans);
+  margin-right: 5rem;
+}
+.btn:hover {
+  background-color: green;
+  transition: var(--trans);
+  color: #fff;
+}
+.nav {
+  background-color: var(--bgColor);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5rem;
+}
+.lNav {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+.lNav img {
+  width: 50px;
+  display: flex;
+  align-items: center;
+}
+.sideBar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #000000c2;
+    height: 100vh;
+    width: 25rem;
+    z-index: 999;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px #00000056;
+    padding-block: 4rem;
+    flex-direction: column;
+    display: none;
+    gap: 1rem;
+}
+.sideBar li{
+    width: 100%;
+}
+.sideBar li i{
+    text-align: right;
+    padding-inline: 2rem;
+    padding-block:1rem ;
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+}
+.sideBar li i:hover,.close i:hover{
+    rotate: 360deg;
+    transition: all .7s ease;
+}
+.sideBar li a{
+    display: flex;
+    width: 100%;
+    padding-inline:4rem ;
+    padding-block:1rem ;
+    position: relative;
+}
+.sideBar li a::after{
+    content: "";
+    width: 1px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: #fff;
+    height: 3.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+}
+.sideBar li a:hover{
+    color: #000;
+}
+.sideBar li a:hover::after{
+    width: 100%;
+    transition:all 1s ease ;
+}
+.nav > i{
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+.NavItem {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  align-items: center;
+  font-size: 1.4rem;
+}
+.NavItem li > a {
+  color: #fff;
+  font-weight: 500;
+  position: relative;
+  z-index: 100;
+}
+.NavItem li a::after {
+  content: "";
+  position: absolute;
+  height: 0rem;
+  padding: 0rem 3rem;
+  bottom: 0;
+  left: -3px;
+  background-color: rgb(0, 0, 0);
+  transition: all 0.4s ease;
+}
+.NavItem li a:hover::after {
+  height: 100%;
+  z-index: -10;
+}
+
+.rNav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.rNav button {
+  padding: 0.5rem 2rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 0.4rem;
+  transition: var(--trans);
+  font-weight: 500;
+  cursor: pointer;
+}
+/* ////////////////////////////////////////// */
+.battle {
+  height: 100dvh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0;
+  margin: auto;
+}
+.background {
+  background-size: cover;
+  height: 100vh;
+  flex: 1;
+}
+.background video {
+  width: 100%;
+}
+.battle .content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+}
+.battle .content h4 {
+  text-transform: capitalize;
+  font-size: 5vw;
+  font-weight: 200;
+  color: #fff;
+}
+.battle .content h2 {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 6rem;
+  text-align: center;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+.battle .content button {
+  padding: 1rem 4rem;
+  font-size: 2rem;
+  background-color: #fa9c22;
+  border-radius: 0.4rem;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.battle .content .btn:hover {
+  background-color: green;
+}
+.social {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 2rem;
+  align-items: center;
+  transition: var(--trans);
+  padding-left: 5rem;
+  padding-right: 5rem;
+  gap: 3rem;
+}
+.social i {
+  background-color: #fa9c22;
+  rotate: 45deg;
+  padding: 0.5rem;
+  margin-right: 2rem;
+  font-size: 2rem;
+  transition: var(--trans);
+}
+
+.social a:hover i {
+  rotate: 0deg;
+  background-color: green;
+  color: #fff;
+}
+.social a {
+  display: flex;
+  align-items: center;
+}
+
+.social li {
+  text-transform: capitalize;
+  font-weight: 500;
+}
+/* ////////////////////////////////////////////////////////////// */
+.events {
+  position: relative;
+}
+.events .content,
+.albums .content {
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+  justify-content: space-between;
+  position: relative;
+  margin: 0 5rem;
+  align-items: center;
+  padding-bottom: 5rem;
+}
+
+.events .content h3,
+.albums .content h3 {
+  font-size: 3rem;
+  text-transform: capitalize;
+}
+.events .content div {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.events .content .btn {
+  padding: 0 3rem;
+  font-size: 2rem;
+  background-color: #fa9c22;
+  border-radius: 0.2rem;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  text-transform: capitalize;
+  font-weight: 400;
+  transition: var(--trans);
+}
+.events .content .btn:hover {
+  background-color: green;
+}
+.eventsCarts {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  margin: auto;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+.eventsCarts .cart {
+  border: 1rem solid gold;
+  color: #fff;
+  padding: 1rem;
+  filter: opacity(0.5) blur(3px);
+  transition: var(--trans);
+  position: relative;
+  border-radius: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.eventsCarts .cart:hover {
+  filter: opacity(1);
+  transition: var(--trans);
+}
+.eventsCarts .cart:nth-child(1) {
+  background: url(/assets/photos/pexels-eric-esma-302047-894156.jpg) center;
+  background-size: cover;
+}
+.eventsCarts .cart:nth-child(2) {
+  background: url(/assets/photos/pexels-lucasallmann-442540.jpg) top;
+  background-size: cover;
+}
+.eventsCarts .cart img {
+  height: 60px;
+}
+.eventsCarts .cart h3 {
+  color: #fff;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.eventsCarts .cart h4 {
+  font-size: 2rem;
+  font-weight: 200;
+  display: flex;
+  gap: 6rem;
+}
+.eventsCarts .cart .bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: center;
+}
+.eventsCarts .cart .bottom h6 {
+  font-size: 1rem;
+  border-radius: 1rem;
+}
+
+.cart:hover h6 {
+  -webkit-text-stroke: 1px black;
+  transition: var(--trans);
+}
+.eventsCarts .cart .bottom .btn {
+  background-color: gold;
+  padding: 0.4rem 3vw;
+  border-radius: 0.4rem;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.eventsCarts .cart .bottom .btn:hover {
+  background-color: green;
+}
+/* ////////////////////////////////////////////////////////////////// */
+.music {
+  position: relative;
+  margin: auto;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+.music .content {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 5rem;
+  align-items: center;
+}
+
+.music .content h3 {
+  color: #fff;
+  font-size: 3rem;
+  text-transform: capitalize;
+}
+.music .music-card {
+  position: relative;
+  margin: auto;
+  box-sizing: border-box;
+}
+.music .music-card ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.music .music-card ul li {
+  padding: 2rem;
+  height: 45rem;
+  border: 2px solid wheat;
+  display: flex;
+  align-items: end;
+}
+.music .music-card ul a:nth-child(1) {
+  background: url(/assets/photos/pexels-mediocrememories-2240765.jpg) center;
+  background-size: cover;
+}
+.music .music-card ul a:nth-child(2) {
+  background: url(/assets/photos/pexels-thibault-dandre-1001054-4039987.jpg)
+    center;
+  background-size: cover;
+}
+.music .music-card ul a:nth-child(3) {
+  background: url(/assets/photos/pexels-mallonymedia-12262184.jpg) center;
+  background-size: cover;
+}
+
+.music .music-card ul li h3 {
+  font-size: 3rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+.albums {
+  position: relative;
+}
+.albums .albumesCards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  margin: auto;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.albumesCards .cart {
+  color: #fff;
+  padding: 1rem;
+  transition: var(--trans);
+  position: relative;
+  border-radius: 0.2rem;
+  gap: 2rem;
+  height: 30rem;
+}
+.albumesCards .cart i {
+  position: absolute;
+  font-size: 6rem;
+  bottom: 30px;
+  cursor: pointer;
+}
+.albumesCards .cart i:hover {
+  scale: 1.1;
+  transition: var(--trans);
+}
+.albumesCards .cart:nth-child(1) {
+  background: url("../assets/photos/pexels-ryan-holloway-71499-243989.jpg")
+    center;
+  background-size: cover;
+  grid-row: 1/3;
+  height: 60rem;
+}
+.albumesCards .cart:nth-child(2) {
+  background: url("../assets/photos/pexels-vafphotos-16118358.jpg") center;
+  background-size: cover;
+}
+.albumesCards .cart:nth-child(3) {
+  background: url("../assets/photos/pexels-kevinbidwell-2114760.jpg") center;
+  background-size: cover;
+}
+.albumesCards .cart:nth-child(4) {
+  background: url("../assets/photos/pexels-marc-schulte-656598-2952834.jpg")
+    center;
+  background-size: cover;
+  grid-column: 2/4;
+}
+footer {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+footer .container {
+  background-color: #fff;
+  border-radius: 2rem;
+  padding: 5rem;
+  color: #000;
+  overflow: hidden;
+}
+footer .container .top {
+  display: flex;
+  justify-content: space-between;
+}
+footer .container .top .FO {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+footer .container .top .FO h3{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+footer .container .top .FO li {
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-weight: 100;
+  padding-top: .5rem;
+}
+footer .container .top img {
+  width: 40vw;
+}
+.fSocials{
+    padding-top:2rem ;
+}
+.fSocials a {
+  color: #000;
+  font-size: 3rem;
+}
+.fSocials a:nth-child(1):hover {
+  color: blue;
+  transition: var(--trans);
+}
+.fSocials a:nth-child(2):hover {
+  font-weight: 600;
+  background: linear-gradient(
+    to right,
+    #f09433,
+    #e6683c,
+    #dc2743,
+    #cc2366,
+    #bc1888
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: var(--trans);
+}
+.fSocials a:nth-child(3):hover {
+  color: rgb(0, 153, 255);
+  transition: var(--trans);
+}
+.fSocials a:nth-child(4):hover {
+  color: rgb(94, 10, 150);
+  transition: var(--trans);
+}
+/* \\\\\\\\\\\\\\\\\\\\\\\login\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+.login{
+  position:fixed;
+  height: 100VH;
+  width: 100vw;
+  display: none;
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+  transition: var(--trans);
+}
+
+.login form{
+  background-color: #0000008c;
+  padding: 4rem;
+  display: flex;
+  backdrop-filter: blur(10px);
+  flex-direction: column;
+  border-radius: 10px;
+  border: #fff solid 2px;
+  color: #fff;
+  font-size: 1.3rem;
+}
+.login form .close,.signUp form .close{
+  font-size: 3rem;
+  display: flex;
+  align-items: end;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+.login form .label{
+  display: flex;
+  margin-bottom: 4rem;
+  position: relative;
+}
+form h3{
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 3rem;
+
+}
+.label i{
+  position: absolute;
+  background-color:var(--bgColor) ;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px 0 0 10px;
+  width: 2.5rem;
+}
+.login form div input{
+  width: 20rem;
+  height: 2.5rem;
+  border-radius: 9px;
+  padding-inline: 3rem;
+  border: none;
+}
+.submit{
+  font-size: 1.2rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  padding: .5rem;
+}
+.submit p{
+  position: relative;
+  z-index: 100;
+  font-weight: 600;
+}
+.submit::after{
+  content: "";
+  position: absolute;
+  height: 100%;
+  background-color: green;
+  width: 0%;
+  top: 0;
+  left: 0;
+}
+.submit:hover::after,.submit p:hover{
+  width: 100%;
+  transition: var(--trans);
+  color: #fff;
+}
+.signUp form .label input{
+  width: 100%;
+  border: none;
+}
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\sign up\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+.signUp{
+  position:fixed;
+  height: 100VH;
+  width: 100vw;
+  display: none;
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+  transition: var(--trans);
+}
+.signUp form{
+  background-color: #0000008c;
+  padding: 4rem;
+  display: flex;
+  backdrop-filter: blur(10px);
+  flex-direction: column;
+  border-radius: 10px;
+  border: #fff solid 2px;
+  color: #fff;
+  font-size: 1.3rem;
+}
+.signUp form .label{
+  display: flex;
+  margin-bottom: 4rem;
+  position: relative;
+}
+.signUp form .label div{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.signUp form .label div:nth-child(2){
+  margin-left: 2rem;
+}
+.signUp form div input{
+  width: 20rem;
+  height: 2.5rem;
+  border-radius: 9px;
+  padding-inline: 3rem;
+  border: none;
+}
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+@media (width<=1200px) {
+    .nav > i{
+        display: flex;
+    }
+    .rNav{
+        display: none;
+    }
+  .NavItem {
+    display: none;
+  }
+  span.links {
+    display: none;
+  }
+  .eventsCarts {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .music .music-card ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .events .content div {
+    flex-direction: column;
+  }
+  .events .content div div {
+    display: flex;
+    flex-direction: row;
+    align-self: self-start;
+  }
+  .albums .albumesCards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .albumesCards .cart:nth-child(1) {
+    background: url("../assets/photos/pexels-ryan-holloway-71499-243989.jpg")
+      center;
+    background-size: cover;
+    grid-row: 1/1;
+    height: 30rem;
+  }
+  .albumesCards .cart:nth-child(4) {
+    background: url("../assets/photos/pexels-marc-schulte-656598-2952834.jpg")
+      center;
+    background-size: cover;
+    grid-column: 2/3;
+  }
+  footer .container .top .FO {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (width<=760px) {
+  .NavItem {
+    display: none;
+  }
+  span.links {
+    display: none;
+  }
+  .eventsCarts {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .music .music-card ul {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .events .content div {
+    flex-direction: column;
+  }
+  .events .content div div {
+    display: flex;
+    flex-direction: row;
+    align-self: self-start;
+  }
+  .albums .albumesCards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .albumesCards .cart:nth-child(1) {
+    background: url("../assets/photos/pexels-ryan-holloway-71499-243989.jpg")
+      top;
+    background-size: cover;
+    grid-row: 1/1;
+    height: 30rem;
+  }
+  .albumesCards .cart:nth-child(4) {
+    background: url("../assets/photos/pexels-marc-schulte-656598-2952834.jpg")
+      center;
+    background-size: cover;
+    grid-column: 1/1;
+  }
+  .fSocials a:nth-child(1) {
+    color: blue;
+    transition: var(--trans);
+  }
+  .fSocials a:nth-child(2) {
+    font-weight: 600;
+    background: linear-gradient(
+      to right,
+      #f09433,
+      #e6683c,
+      #dc2743,
+      #cc2366,
+      #bc1888
+    );
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: var(--trans);
+  }
+  .fSocials a:nth-child(3) {
+    color: rgb(0, 153, 255);
+    transition: var(--trans);
+  }
+  .fSocials a:nth-child(4) {
+    color: rgb(94, 10, 150);
+    transition: var(--trans);
+  }
+}

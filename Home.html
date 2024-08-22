@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>music</title>
+    <script src="gsap.min.js" defer></script>
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="play_free">
+        <button class="playFree capitalize font btn">Play for free</button>
+      </div>
+
+      <div class="nav">
+        <div class="lNav">
+          <img src="assets/icons/Group 5.png" alt="" />
+        </div>
+        <div class="mNav">
+          <ul class="NavItem capitalize font">
+            <li id="link1"><a href="#">home</a></li>
+            <li id="link2"><a href="#">music</a></li>
+            <li id="link3"><a href="#">albums</a></li>
+            <li id="link4"><a href="#">events</a></li>
+          </ul>
+          <ul class="sideBar capitalize font">
+            <li><i onclick="hideSideBar()" class="bx bx-x"></i></li>
+            <li id="link1"><a href="#">home</a></li>
+            <li id="link2"><a href="#">events</a></li>
+            <li id="link3"><a href="#">music</a></li>
+            <li id="link4"><a href="#">albums</a></li>
+            <li><a onclick="showLoginSec()" href="#">login</a></li>
+            <li><a onclick="showSignUpSec()" href="#">sign up</a></li>
+          </ul>
+        </div>
+        <div class="rNav">
+          <button onclick="showSignUpSec()" class="btn">sign up</button>
+          <button onclick="showLoginSec()" class="btn">login</button>
+        </div>
+        <i onclick="showSideBar()" class="bx bx-menu menu"></i>
+      </div>
+    </header>
+    <section class="login">
+      <form action="">
+        <div class="close">
+          <li><i onclick="hideLoginSec()" class="bx bx-x"></i></li>
+        </div>
+        <h3 class="capitalize">login</h3>
+        <div class="label">
+          <label for="email"><i class="bx bxs-envelope"></i></label>
+
+          <input id="email" type="email" placeholder="email" />
+        </div>
+        <div class="label">
+          <label for="password"><i class="bx bxs-lock-alt"></i></label>
+
+          <input id="password" type="password" placeholder="password" />
+        </div>
+
+        <button class="submit"><p class="capitalize">login</p></button>
+      </form>
+    </section>
+    <section class="signUp">
+      <form action="">
+        <div class="close">
+          <li><i onclick="hideSignUpSec()" class="bx bx-x"></i></li>
+        </div>
+        <h3 class="capitalize">sign up</h3>
+        <div class="label user">
+          <div>
+            <label for="fName"><i class="bx bx-user"></i></label>
+            <input id="fName" type="text" placeholder="First Name" />
+          </div>
+
+          <div>
+            <label for="lName"><i class="bx bx-user"></i></label>
+            <input id="lName" type="text" placeholder="Last Name" />
+          </div>
+        </div>
+        <div class="label">
+          <label for="s-email"><i class="bx bxs-envelope"></i></label>
+          <input id="s-email" type="email" placeholder="email" />
+        </div>
+        <div class="label">
+          <label for="s-password"><i class="bx bxs-lock-alt"></i></label>
+          <input id="s-password" type="password" placeholder="Password" />
+        </div>
+        <div class="label">
+          <label for="c-password"><i class="bx bxs-lock-alt"></i></label>
+          <input
+            id="c-password"
+            type="password"
+            placeholder="Confirm Password"
+          />
+        </div>
+        <button class="submit"><p class="capitalize">sign up</p></button>
+      </form>
+    </section>
+    <section class="battle">
+      <div class="background">
+        <video
+          src="/assets/photos/Defocused Silhouettes in A Concert. - Free HD Video Clips & Stock Video Footage at Videezy!.mp4"
+          autoplay
+          loop
+          muted
+        ></video>
+      </div>
+      <div id="content" class="content">
+        <h4>Join now</h4>
+        <h2>
+          battle of the <br />
+          year
+        </h2>
+        <button class="btn">see more</button>
+        <ul class="social">
+          <li>
+            <a href="#"
+              ><i class="bx bxl-facebook"></i
+              ><span class="links aHover">facebook</span>
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              ><i class="bx bxl-twitter"></i
+              ><span class="links aHover">twitter</span>
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              ><i class="bx bxl-instagram"></i
+              ><span class="links aHover">instagram</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="events">
+      <div class="content">
+        <div>
+          <h3>events and leagues</h3>
+          <div>
+            <button class="btn">live</button>
+            <button class="btn">features</button>
+          </div>
+        </div>
+        <a class="aHover" href="#">see more</a>
+      </div>
+      <div class="eventsCarts">
+        <div class="cart">
+          <h3>friday night 100$</h3>
+          <h4><span>2v2</span><span>team26</span></h4>
+          <div class="bottom">
+            <img src="/assets/icons/Group 5.png" />
+            <h6>21/6/2024</h6>
+            <button class="btn">join us</button>
+          </div>
+        </div>
+        <div class="cart">
+          <h3>friday night 100$</h3>
+          <h4><span>2v2</span><span>team26</span></h4>
+          <div class="bottom">
+            <img src="/assets/icons/Group 5.png" />
+            <h6>21/6/2024</h6>
+            <button class="btn">join us</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="music">
+      <div class="content">
+        <h3>music list</h3>
+        <a class="aHover" href="#">see more</a>
+      </div>
+      <div class="music-card">
+        <ul>
+          <a href="">
+            <li><h3>rap music</h3></li>
+          </a>
+          <a href="">
+            <li><h3>rock music</h3></li>
+          </a>
+          <a href="">
+            <li><h3>gaz music</h3></li>
+          </a>
+        </ul>
+      </div>
+    </section>
+    <section class="albums">
+      <div class="content">
+        <h3>latest albums</h3>
+        <a class="aHover" href="#">see more</a>
+      </div>
+      <div class="albumesCards">
+        <div class="cart">
+          <i class="bx bx-play-circle bx-flip-vertical"></i>
+        </div>
+        <div class="cart">
+          <i class="bx bx-play-circle bx-flip-vertical"></i>
+        </div>
+        <div class="cart">
+          <i class="bx bx-play-circle bx-flip-vertical"></i>
+        </div>
+        <div class="cart">
+          <i class="bx bx-play-circle bx-flip-vertical"></i>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="top">
+          <div class="FO capitalize">
+            <div>
+              <ul>
+                <h3>company</h3>
+                <li>home</li>
+                <li>about</li>
+                <li>vision</li>
+                <li>genesis</li>
+              </ul>
+            </div>
+            <div>
+              <ul>
+                <h3>marketplace</h3>
+                <li>collections</li>
+                <li>create</li>
+                <li>apply</li>
+              </ul>
+            </div>
+            <div>
+              <ul>
+                <h3>support</h3>
+                <li>contact</li>
+                <li>FAQ</li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <img src="/assets/photos/undraw_mello_otq1 (1).png" alt="" />
+          </div>
+        </div>
+        <div class="fSocials">
+          <a href="#"><i class="bx bxl-facebook-circle"></i></a>
+          <a href="#"><i class="bx bxl-instagram"></i></a>
+          <a href="#"><i class="bx bxl-twitter"></i></a>
+          <a href="#"><i class="bx bxl-discord-alt"></i></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
