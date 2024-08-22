@@ -426,16 +426,16 @@ a {
   align-items: end;
 }
 .music .music-card ul a:nth-child(1) {
-  background: url(/assets/photos/pexels-mediocrememories-2240765.jpg) center;
+  background: url("../assets/photos/pexels-mediocrememories-2240765.jpg") center;
   background-size: cover;
 }
 .music .music-card ul a:nth-child(2) {
-  background: url(/assets/photos/pexels-thibault-dandre-1001054-4039987.jpg)
+  background: url("../assets/photos/pexels-thibault-dandre-1001054-4039987.jpg")
     center;
   background-size: cover;
 }
 .music .music-card ul a:nth-child(3) {
-  background: url(/assets/photos/pexels-mallonymedia-12262184.jpg) center;
+  background: url("../assets/photos/pexels-mallonymedia-12262184.jpg") center;
   background-size: cover;
 }
 
